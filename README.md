@@ -1,3 +1,5 @@
+Calculadora
+
 ## Funciones Principales
 
 ### `agregarALaPantalla(value)`
@@ -26,6 +28,15 @@ La función `limpiarPantalla()` se utiliza para borrar el contenido de la pantal
 
     function limpiarPantalla() {
         document.getElementById('pantalla').value = '';
+    }
+
+### `borrar()`
+La función `borrar()`, tomás el valor de la pantalla y lo modificás con `slice(0, -1)`para quitar el último carácter, luego actualizás la pantalla.
+    
+    function borrar() {
+        const valorPantalla = document.getElementById('pantalla').value;  
+        const nuevoValor = valorPantalla.slice(0, -1);                   
+        document.getElementById('pantalla').value = nuevoValor;          
     }
 
 ## Integración con HTML y CSS
